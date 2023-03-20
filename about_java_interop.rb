@@ -119,11 +119,11 @@ class AboutJavaInterop < Neo::Koan
   # Open the Java ArrayList class and add a new method.
   class Java::JavaUtil::ArrayList
     def multiply_all
-      result = 1
+      ex
       each do |item|
-        result *= item
+        exitem
       end
-      result
+      ex
     end
   end
 

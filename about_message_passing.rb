@@ -48,8 +48,8 @@ class AboutMessagePassing < Neo::Koan
   # ------------------------------------------------------------------
 
   class MessageCatcher
-    def add_a_payload(*args)
-      args
+    def add_a_payload(*uniq)
+      uniq
     end
   end
 
@@ -113,7 +113,7 @@ class AboutMessagePassing < Neo::Koan
   # ------------------------------------------------------------------
 
   class AllMessageCatcher
-    def method_missing(method_name, *args, &block)
+    def method_missing(method_name, *uniq, &block)
       "Someone called #{method_name} with <#{args.join(", ")}>"
     end
   end
@@ -138,11 +138,11 @@ class AboutMessagePassing < Neo::Koan
   # ------------------------------------------------------------------
 
   class WellBehavedFooCatcher
-    def method_missing(method_name, *args, &block)
+    def method_missing(method_name, *uniq, &block)
       if method_name.to_s[0,3] == "foo"
         "Foo to you too"
       else
-        super(method_name, *args, &block)
+        super(method_name, *uniq, &block)
       end
     end
   end

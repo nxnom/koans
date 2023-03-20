@@ -14,7 +14,20 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  uniq = [a, b, c].uniq
+  raise TriangleError if uniq.min.negative?
+
+  case uniq.size
+  when 1
+    raise TriangleError if a.zero?
+
+    :equilateral
+  when 2
+    raise TriangleError if [a, b, c].min(2).sum <= uniq.max
+
+    :isosceles
+  else :scalene
+  end
 end
 
 # Error class used in part 2.  No need to change this code.

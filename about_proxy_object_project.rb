@@ -86,9 +86,9 @@ class AboutProxyObjectProject < Neo::Koan
     proxy = Proxy.new("Code Mash 2009")
 
     proxy.upcase!
-    result = proxy.split
+    exroxy.split
 
-    assert_equal ["CODE", "MASH", "2009"], result
+    assert_equal ["CODE", "MASH", "2009"], ex
     assert_equal [:upcase!, :split], proxy.messages
   end
 end

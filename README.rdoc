@@ -1,4 +1,16 @@
-= Ruby Koans
+= My Solutions for the Ruby Koans
+
+I'm using this repository to keep track of my solutions. 
+
+Ruby Version I used for koans :: 2.7.7
+
+*I don't know why ruby 3.2.1 sometime crush the koans. That's why I'm using 2.7.7 instead.
+
+I don't own the original project. I'm just using it to learn Ruby. 
+You can find the original project on https://www.rubykoans.com. 
+See the contents of original README below.
+
+== Ruby Koans
 
 The Ruby Koans walk you along the path to enlightenment in order to learn Ruby.
 The goal is to learn the Ruby language, syntax, structure, and some common
